@@ -61,28 +61,41 @@
       height: 600px;
     }
 
+    .box-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+      justify-content: center;
+      height: 100vh;
+      align-items: center;
+    }
+
     .box-img {
       height: 300px;
-      width: 100%;
       padding: 0;
       background-size: cover;
       background-position: center;
-      border-radius: 5px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       position: relative;
 
+
     }
 
     .box {
-      max-width: 300px;
-      width: 100%;
       height: 600px;
       padding: 5px;
       margin: auto;
       background-color: whitesmoke;
+      border-radius: 10px;
+      width: 22%;
+      padding-bottom: 20px;
+      color: #fff;
     }
 
     .view-details {
@@ -95,7 +108,7 @@
       padding: 8px 12px;
       margin: 5px;
       font-weight: bold;
-        font-family: "monospace";
+      font-family: "monospace";
       cursor: pointer;
       border-radius: 4px;
     }
@@ -109,17 +122,6 @@
       opacity: 1;
       transform: translateY(0);
 
-    }
-
-    .card {
-      background-color: whitesmoke;
-      padding: 5px;
-      width: 97%;
-      margin: auto;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
     }
 
 
@@ -200,6 +202,19 @@
     .footer-links i:hover {
       transform: scale(1.1);
 
+    }
+
+    @media(min-width: 600px) and (max-width: 1000px) {
+      .box {
+        width: 45%;
+      }
+    }
+
+    /*Mobile view*/
+    @media(max-width: 600px) {
+      .box {
+        width: 95%;
+      }
     }
   </style>
 
@@ -317,79 +332,61 @@
       </div>
     </section>
     <section class="mid_section mt-5">
-      <div class="container-fluid mx-auto">
-        <div class="row g-2 justify-content-center">
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card shadow-sm border-0 rounded-5 p-3 mb-5">
-              <div class="box">
-                <div class="box-img" style="background-image: url('https://images.unsplash.com/photo-1651013691313-81b822df0044?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
-                  <button class="view-details">VIEW DETAILS</button>
-                </div>
-                <div class="caption" style="font-family: monospace;">
-                  <h5 class="mt-2 mb-4"><b>Adidas</b></h5>
-                  <p>Men's Lace Up Sneaker Shoes |<br><br> Casual Wear </p>
-                  <p><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i></p>
-                  <p><b>₹1,299</b> M.R.P: <s>₹16,000</s>[57% off]</p>
-                  <p class="text-success">In Stock</p>
-                  <p>Free Delivery</p><br>
-                  <button type="button" class="btn btn-warning rounded-pill py-2 px-3">Add to cart</button>
+      <div class="box-container mx-auto">
+        <div class="box">
+          <div class="box-img" style="background-image: url('https://images.unsplash.com/photo-1651013691313-81b822df0044?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+            <button class="view-details">VIEW DETAILS</button>
+          </div>
+          <div class="caption" style="font-family: monospace;">
+            <h5 class="mt-2 mb-4"><b>Adidas</b></h5>
+            <p>Men's Lace Up Sneaker Shoes |<br><br> Casual Wear </p>
+            <p><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i></p>
+            <p><b>₹1,299</b> M.R.P: <s>₹16,000</s>[57% off]</p>
+            <p class="text-success">In Stock</p>
+            <p>Free Delivery</p><br>
+            <button type="button" class="btn btn-warning rounded-pill py-2 px-3">Add to cart</button>
 
-                </div>
-              </div>
-            </div>
           </div>
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card shadow-sm border-0 rounded-4 p-3 mb-5 ">
-              <div class="box">
-                <div class="box-img" style="background-image: url('https://plus.unsplash.com/premium_photo-1718913936342-eaafff98834b?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
-                  <button class="view-details">VIEW DETAILS</button>
-                </div>
-                <div class="caption" style="font-family: monospace;">
-                  <h5 class="mt-2 mb-4"><b>U.S. Polo Assn.</b></h5>
-                  <p>Solid smokewhite T-Shirt for <br> <br>Men | Casual wear </p>
-                  <p><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i></p>
-                  <p><b>₹499</b> M.R.P: <s>₹2,999</s>[85% off]</p>
-                  <p class="text-secondary">Only few left in Stock</p>
-                  <button type="button" class="btn btn-danger btn-sm rounded-3 mb-4 px-1 py-0">limited time deal</button><br>
-                  <button type="button" class="btn btn-warning rounded-pill py-2 px-3">Add to cart</button>
-                </div>
-              </div>
-            </div>
+        </div>
+        <div class="box">
+          <div class="box-img" style="background-image: url('https://plus.unsplash.com/premium_photo-1718913936342-eaafff98834b?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+            <button class="view-details">VIEW DETAILS</button>
           </div>
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card shadow-sm border-0 rounded-4 p-3 mb-5 ">
-              <div class="box">
-                <div class="box-img" style="background-image: url('https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%3D');">
-                  <button class="view-details">VIEW DETAILS</button>
-                </div>
-                <div class="caption" style="font-family: monospace;">
-                  <h5 class="mt-2 mb-4"><b>Levi's</b></h5>
-                  <p>Men's Mid Rise Denim Regular <br><br> Fit Jeans</p>
-                  <p><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i></p>
-                  <p><b>₹748</b> M.R.P: <s>₹2,999</s>[75% off]</p>
-                  <p class="text-success">In Stock</p>
-                  <button type="button" class="btn btn-info btn-sm rounded-3 mb-4 px-1 py-0">#1 Bestseller</button><br>
-                  <button type="button" class="btn btn-warning rounded-pill py-2 px-3">Add to cart</button>
-                </div>
-              </div>
-            </div>
+          <div class="caption" style="font-family: monospace;">
+            <h5 class="mt-2 mb-4"><b>U.S. Polo Assn.</b></h5>
+            <p>Solid smokewhite T-Shirt for <br> <br>Men | Casual wear </p>
+            <p><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i></p>
+            <p><b>₹499</b> M.R.P: <s>₹2,999</s>[85% off]</p>
+            <p class="text-secondary">Only few left in Stock</p>
+            <button type="button" class="btn btn-danger btn-sm rounded-3 mb-4 px-1 py-0">limited time deal</button><br>
+            <button type="button" class="btn btn-warning rounded-pill py-2 px-3">Add to cart</button>
           </div>
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card shadow-sm border-0 rounded-4 p-3 mb-5">
-              <div class="box">
-                <div class="box-img" style="background-image: url('https://images.unsplash.com/photo-1720534490358-bc2ad29d51d5?fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmFzZWJhbGwlMjBjYXB8ZW58MHx8MHx8fDA%3D&ixlib=rb-4.1.0&q=60&w=3000');">
-                  <button class="view-details">VIEW DETAILS</button>
-                </div>
-                <div class="caption" style="font-family: monospace;">
-                  <h5 class="mt-2 mb-4"><b>New York Yankees</b></h5>
-                  <p>Polyester Perforated Blank Cap <br><br> | Unisex </p>
-                  <p><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i></p>
-                  <p><b>₹6,000</b> M.R.P: <s>₹8,000</s>[25% off]</p>
-                  <p class="text-danger">Out of Stock</p><br><br>
-                  <button type="button" class="btn btn-warning rounded-pill py-2 px-3">Add to cart</button>
-                </div>
-              </div>
-            </div>
+        </div>
+        <div class="box">
+          <div class="box-img" style="background-image: url('https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%3D');">
+            <button class="view-details">VIEW DETAILS</button>
+          </div>
+          <div class="caption" style="font-family: monospace;">
+            <h5 class="mt-2 mb-4"><b>Levi's</b></h5>
+            <p>Men's Mid Rise Denim Regular <br><br> Fit Jeans</p>
+            <p><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i></p>
+            <p><b>₹748</b> M.R.P: <s>₹2,999</s>[75% off]</p>
+            <p class="text-success">In Stock</p>
+            <button type="button" class="btn btn-info btn-sm rounded-3 mb-4 px-1 py-0">#1 Bestseller</button><br>
+            <button type="button" class="btn btn-warning rounded-pill py-2 px-3">Add to cart</button>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box-img" style="background-image: url('https://images.unsplash.com/photo-1720534490358-bc2ad29d51d5?fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmFzZWJhbGwlMjBjYXB8ZW58MHx8MHx8fDA%3D&ixlib=rb-4.1.0&q=60&w=3000');">
+            <button class="view-details">VIEW DETAILS</button>
+          </div>
+          <div class="caption" style="font-family: monospace;">
+            <h5 class="mt-2 mb-4"><b>New York Yankees</b></h5>
+            <p>Polyester Perforated Blank Cap <br><br> | Unisex </p>
+            <p><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i></p>
+            <p><b>₹6,000</b> M.R.P: <s>₹8,000</s>[25% off]</p>
+            <p class="text-danger">Out of Stock</p><br><br>
+            <button type="button" class="btn btn-warning rounded-pill py-2 px-3">Add to cart</button>
           </div>
         </div>
       </div>
@@ -585,9 +582,3 @@
   </body>
 
 </html>
-
-
-
-
-
-
