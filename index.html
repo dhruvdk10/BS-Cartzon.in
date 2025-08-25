@@ -73,35 +73,31 @@
 }
     }
 
-    .box-img {
-      height: 350px;
-      width: 100%;
-      padding: 0;
-      background-size: cover;
-      background-position: center;
-      border-top-left-radius: 12px;
-      border-top-right-radius: 12px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-
-
-    }
+   .box-img {
+  width: 100%;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  position: relative;
+  aspect-ratio: 16 / 9;   /* or 4/3 depending on look */
+  height: auto;
+}
 
     .box {
-      margin: 10px;
-      background-color: whitesmoke;
-      width: 22%;
-      padding-bottom: 20px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05),
-        0 8px 16px rgba(0, 0, 0, 0.08);
-      border-radius: 12px;
-  max-height: 600px; 
+  margin: 10px;
+  background-color: whitesmoke;
+  width: 22%;
+  padding-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05),
+    0 8px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
   display: flex;
-      flex-direction: column;
-    }
+  flex-direction: column;
+  height: auto;    
+  max-height: none;   
+}
 
     .box:hover{
       transform: translateY(-5px);
@@ -614,6 +610,7 @@
   </body>
 
 </html>
+
 
 
 
