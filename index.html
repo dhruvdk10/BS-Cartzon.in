@@ -61,25 +61,29 @@
       height: 600px;
     }
 
-    .box-container {
-        display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch; 
-  height: auto; 
-      margin: 10px;
-}
+    .box-img {
+      height: 300px;
+      width: 100%;
+      padding: 0;
+      background-size: cover;
+      background-position: center;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
 
-    .card {
-  background-color: whitesmoke;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05),
-    0 8px 16px rgba(0, 0, 0, 0.08);
-  border-radius: 12px;    
-}
+    }
 
-    .card:hover{
-      transform: translateY(-5px);
-        transition: transform 0.3s ease;
+    .box {
+      max-width: 400px;
+      width: 100%;
+      height: 600px;
+      padding: 5px;
+      margin: auto;
+      font-family: "monospace";
+      background-color: whitesmoke;
     }
 
     .view-details {
@@ -92,7 +96,6 @@
       padding: 8px 12px;
       margin: 5px;
       font-weight: bold;
-      font-family: monospace;
       cursor: pointer;
       border-radius: 4px;
     }
@@ -108,6 +111,17 @@
 
     }
 
+    .card {
+      background-color: whitesmoke;
+      padding: 5px;
+      width: 97%;
+      margin: auto;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
 
     section.img_display img {
       height: 700px;
@@ -115,27 +129,11 @@
     }
 
     p {
-      font-size: 16px;
-      font-family: monospace;
-      color: black;
-      margin: 5px 0;
-    }
-
-        .slogan {
-        text-align: center;
-        margin: 80px 0;
-        font-family: 'Trebuchet MS', sans-serif;
-        color: #232f3e;
-      }
-
-       .footer-top p {
-      line-height: 1.2;
-      font-family: sans-serif;
+      line-height: 0.8;
     }
 
     .footer-bottom p {
       line-height: 1;
-      font-family: sans-serif;
     }
 
 
@@ -203,19 +201,6 @@
       transform: scale(1.1);
 
     }
-
-    @media(min-width: 600px) and (max-width: 1000px) {
-      .box {
-        width: 45%;
-      }
-    }
-
-    /*Mobile view*/
-    @media(max-width: 600px) {
-      .box {
-        width: 95%;
-      }
-    }
   </style>
 
   <body>
@@ -249,7 +234,7 @@
                 <option>Electronics</option>
               </select>
 
-              <input type="text" class="form-control border-0" placeholder="Search Cartzon.in">
+              <input type="text" class="form-control border-0" placeholder="Search Amazon.in">
 
               <button class="btn btn-info" type="button">
                 <i class="fas fa-search text-white"></i>
@@ -301,7 +286,7 @@
             <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block img-fluid" alt="Banner1" style="width: 100%; max-height: 68vh; object-fit: cover;">
             <div class="carousel-caption d-block text-light">
               <h2>FASHION</h2>
-              <p class="text-light">Your Style, Your Statement.</p>
+              <p>Your Style, Your Statement.</p>
             </div>
           </div>
 
@@ -309,7 +294,7 @@
             <img src="https://images.unsplash.com/photo-1615655406736-b37c4fabf923?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block img-fluid" alt="Banner2" style="width: 100%; max-height: 68vh; object-fit: cover; object-position: top left;">
             <div class="carousel-caption d-block text-light">
               <h2>ELECTRONICS</h2>
-              <p class="text-light">Next-Gen Gadgets at Unbeatable Prices</p>
+              <p>Next-Gen Gadgets at Unbeatable Prices</p>
             </div>
           </div>
 
@@ -317,7 +302,7 @@
             <img src="https://images.unsplash.com/photo-1518481852452-9415b262eba4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block img-fluid" alt="Banner3" style="width: 100%; max-height:68vh; object-fit: cover; object-position: top-right;">
             <div class="carousel-caption d-block text-light">
               <h2>FURNITURE</h2>
-              <p class="text-light">Furnish Your Dreams - Modern. Minimal.</p>
+              <p>Furnish Your Dreams - Modern. Minimal.</p>
             </div>
           </div>
         </div>
@@ -332,81 +317,81 @@
       </div>
     </section>
     <section class="mid_section mt-5">
-      <div class="box-container mx-auto row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+      <div class="container-fluid mx-auto">
+        <div class="row g-2 justify-content-center">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card shadow-sm border-0 rounded-5 p-3 mb-5">
+              <div class="box">
+                <div class="box-img" style="background-image: url('https://images.unsplash.com/photo-1651013691313-81b822df0044?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                  <button class="view-details">VIEW DETAILS</button>
+                </div>
+                <div class="caption" style="font-family: monospace;">
+                  <h5 class="mt-2 mb-4"><b>Adidas</b></h5>
+                  <p>Men's Lace Up Sneaker Shoes |<br><br> Casual Wear </p>
+                  <p><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i></p>
+                  <p><b>₹1,299</b> M.R.P: <s>₹16,000</s>[57% off]</p>
+                  <p class="text-success">In Stock</p>
+                  <p>Free Delivery</p><br>
+                  <button type="button" class="btn btn-warning rounded-pill py-2 px-3">Add to cart</button>
 
-  <div class="col-3">
-    <div class="card h-100 shadow-sm">
-      <img src="https://images.unsplash.com/photo-1651013691313-81b822df0044?q=80&w=1974&auto=format&fit=crop"
-           class="card-img-top img-fluid"
-           alt="Adidas Shoes"
-           style="height: 300px; object-fit: cover;">
-      <div class="card-body" style="font-family: monospace;">
-        <h5 class="card-title"><b>Adidas</b></h5>
-        <p class="card-text">Men's Lace Up Sneaker Shoes | Casual Wear</p>
-        <p>
-          <i class="fas fa-star text-warning"></i>
-          <i class="fas fa-star text-warning"></i>
-          <i class="fas fa-star text-warning"></i>
-          <i class="fas fa-star text-warning"></i>
-          <i class="fas fa-star text-warning"></i>
-        </p>
-        <p><b>₹1,299</b> M.R.P: <s>₹16,000</s> [57% off]</p>
-        <p class="text-success">In Stock</p>
-        <p>Free Delivery</p>
-        <button type="button" class="btn btn-warning btn-sm rounded-pill py-1 px-2">Add to cart</button>
-      </div>
-    </div>
-  </div>
-        <div class="col-3">
-    <div class="card h-100 shadow-sm">
-          <img src="https://plus.unsplash.com/premium_photo-1718913936342-eaafff98834b?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      class="card-img-top img-fluid"
-           alt="U.S. Polo Assn."
-           style="height: 300px; object-fit: cover;">
-      <div class="card-body" style="font-family: monospace;">
-            <h5 class="mt-2 mb-2"><b>U.S. Polo Assn.</b></h5>
-            <p>Solid smokewhite T-Shirt for Men | Casual wear </p>
-            <p><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i></p>
-            <p><b>₹499</b> M.R.P: <s>₹2,999</s>[85% off]</p>
-            <p class="text-secondary">Only few left in Stock</p>
-            <button type="button" class="btn btn-danger btn-sm rounded-3 mb-2 px-1 py-0">limited time deal</button><br>
-            <button type="button" class="btn btn-warning btn-sm rounded-pill py-1 px-2">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card shadow-sm border-0 rounded-4 p-3 mb-5 ">
+              <div class="box">
+                <div class="box-img" style="background-image: url('https://plus.unsplash.com/premium_photo-1718913936342-eaafff98834b?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                  <button class="view-details">VIEW DETAILS</button>
+                </div>
+                <div class="caption" style="font-family: monospace;">
+                  <h5 class="mt-2 mb-4"><b>U.S. Polo Assn.</b></h5>
+                  <p>Solid smokewhite T-Shirt for <br> <br>Men | Casual wear </p>
+                  <p><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i></p>
+                  <p><b>₹499</b> M.R.P: <s>₹2,999</s>[85% off]</p>
+                  <p class="text-secondary">Only few left in Stock</p>
+                  <button type="button" class="btn btn-danger btn-sm rounded-3 mb-4 px-1 py-0">limited time deal</button><br>
+                  <button type="button" class="btn btn-warning rounded-pill py-2 px-3">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card shadow-sm border-0 rounded-4 p-3 mb-5 ">
+              <div class="box">
+                <div class="box-img" style="background-image: url('https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%3D');">
+                  <button class="view-details">VIEW DETAILS</button>
+                </div>
+                <div class="caption" style="font-family: monospace;">
+                  <h5 class="mt-2 mb-4"><b>Levi's</b></h5>
+                  <p>Men's Mid Rise Denim Regular <br><br> Fit Jeans</p>
+                  <p><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i></p>
+                  <p><b>₹748</b> M.R.P: <s>₹2,999</s>[75% off]</p>
+                  <p class="text-success">In Stock</p>
+                  <button type="button" class="btn btn-info btn-sm rounded-3 mb-4 px-1 py-0">#1 Bestseller</button><br>
+                  <button type="button" class="btn btn-warning rounded-pill py-2 px-3">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card shadow-sm border-0 rounded-4 p-3 mb-5">
+              <div class="box">
+                <div class="box-img" style="background-image: url('https://images.unsplash.com/photo-1720534490358-bc2ad29d51d5?fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmFzZWJhbGwlMjBjYXB8ZW58MHx8MHx8fDA%3D&ixlib=rb-4.1.0&q=60&w=3000');">
+                  <button class="view-details">VIEW DETAILS</button>
+                </div>
+                <div class="caption" style="font-family: monospace;">
+                  <h5 class="mt-2 mb-4"><b>New York Yankees</b></h5>
+                  <p>Polyester Perforated Blank Cap <br><br> | Unisex </p>
+                  <p><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i></p>
+                  <p><b>₹6,000</b> M.R.P: <s>₹8,000</s>[25% off]</p>
+                  <p class="text-danger">Out of Stock</p><br><br>
+                  <button type="button" class="btn btn-warning rounded-pill py-2 px-3">Add to cart</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        </div>
-        <div class="col-3">
-    <div class="card h-100 shadow-sm">
-          <img src="https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%3D"
-             class="card-img-top img-fluid"
-           alt="Levi's"
-           style="height: 300px; object-fit: cover;">
-          <div class="card-body" style="font-family: monospace;">
-            <h5 class="mt-2 mb-2"><b>Levi's</b></h5>
-            <p>Men's Mid Rise Denim Regular Fit Jeans</p>
-            <p><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i></p>
-            <p><b>₹748</b> M.R.P: <s>₹2,999</s>[75% off]</p>
-            <p class="text-success">In Stock</p>
-            <button type="button" class="btn btn-info btn-sm rounded-3 mb-2 px-1 py-0">#1 Bestseller</button><br>
-            <button type="button" class="btn btn-warning btn-sm rounded-pill py-1 px-2">Add to cart</button>
-          </div>
-          </div>
-        </div>
-        <div class="col-3">
-    <div class="card h-100 shadow-sm">
-          <img src="https://images.unsplash.com/photo-1720534490358-bc2ad29d51d5?fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmFzZWJhbGwlMjBjYXB8ZW58MHx8MHx8fDA%3D&ixlib=rb-4.1.0&q=60&w=3000"
-             class="card-img-top img-fluid"
-           alt="Levi's"
-           style="height: 300px; object-fit: cover;">
-          <div class="card-body" style="font-family: monospace;">
-            <h5 class="mt-2 mb-2"><b>New York Yankees</b></h5>
-            <p>Polyester Perforated Blank Cap | Unisex </p>
-            <p><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i></p>
-            <p><b>₹6,000</b> M.R.P: <s>₹8,000</s>[25% off]</p>
-            <p class="text-danger">Out of Stock</p><br>
-            <button type="button" class="btn btn-warning btn-sm rounded-pill py-1 px-2">Add to cart</button>
-          </div>
-        </div>
-      </div>
       </div>
     </section>
     <section class="form-box mt-5 mb-5">
@@ -518,37 +503,31 @@
           </table>
         </div>
       </div>
-
-      <div class="slogan">
-      <p class="fs-6 fs-lg-3">
-        Your Cart, Your Zone.
-      </p>
-    </div>
     </section>
     <footer class="w-100 pt-5">
 
-      <div class="footer-top text-center py-4 text-white mt-5 small" style="background-color: #1b2b3e;">
+      <div class="text-center py-4 text-white mt-5 small" style="background-color: #1b2b3e;">
         <div class="container text-white py-4" style="background-color: #1b2b3e;">
           <div class="row text-center justify-content-center text-nowrap">
 
-            <div class="col-4" style="font-family: sans-serif;">
-              <p class="fw-bold mb-3 fs-8 text-white">Get to Know Us</p>
+            <div class="col-4">
+              <p class="fw-bold mb-3 fs-8">Get to Know Us</p>
               <p><a href="#" class="text-white text-decoration-none fs-7">About Cartzon</a></p>
               <p><a href="#" class="text-white text-decoration-none fs-7">Careers</a></p>
               <p><a href="#" class="text-white text-decoration-none fs-7">Media & Press</a></p>
               <p><a href="#" class="text-white text-decoration-none fs-7">Cartzon Blog</a></p>
             </div>
 
-            <div class="col-4" style="font-family: sans-serif;">
-              <p class="fw-bold mb-3 fs-8 text-white">Sell on Cartzon</p>
+            <div class="col-4">
+              <p class="fw-bold mb-3 fs-8">Sell on Cartzon</p>
               <p><a href="#" class="text-white text-decoration-none fs-7">Start Selling</a></p>
               <p><a href="#" class="text-white text-decoration-none fs-7">Vendor Signup</a></p>
               <p><a href="#" class="text-white text-decoration-none fs-7">Affiliate Program</a></p>
               <p><a href="#" class="text-white text-decoration-none fs-7">Promote Products</a></p>
             </div>
 
-            <div class="col-4" style="font-family: sans-serif;">
-              <p class="fw-bold mb-3 fs-8 text-white">Customer Support</p>
+            <div class="col-4">
+              <p class="fw-bold mb-3 fs-8">Customer Support</p>
               <p><a href="#" class="text-white text-decoration-none fs-7">Your Account</a></p>
               <p><a href="#" class="text-white text-decoration-none fs-7">Track Your Order</a></p>
               <p><a href="#" class="text-white text-decoration-none fs-7">Returns & Refunds</a></p>
@@ -586,9 +565,9 @@
 
       <div class="row justify-content-center mt-0 text-center" style="background-color: #0d1117; color: #ccc;">
         <div class="footer-bottom col-md-8 mt-3">
-          <p class="mb-1 fs-8 text-light">This website is for project use only and is not endorsed by any displayed brand.</p>
-          <p class="mb-1 fs-8 text-light">© 2025 Cartzon.in. All rights reserved. Dhruv Kapoor</p>
-          <p class="mb-2 fs-8 text-light">Follow us on :</p>
+          <p class="mb-1 fs-8">This website is for project use only and is not endorsed by any displayed brand.</p>
+          <p class="mb-1 fs-8">© 2025 Cartzon.in. All rights reserved. Dhruv Kapoor</p>
+          <p class="mb-2 fs-8">Follow us on :</p>
 
           <div class="social-icons mt-3">
             <div class="footer-links d-flex justify-content-center gap-3 fs-5">
@@ -606,26 +585,5 @@
   </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
